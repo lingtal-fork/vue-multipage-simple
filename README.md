@@ -1,6 +1,6 @@
 # vue-multipage-simple
 
-> A Vue.js project
+> 一个vue的简单多页配置
 
 ## Build Setup
 

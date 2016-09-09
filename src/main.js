@@ -1,8 +1,9 @@
 import Vue from 'vue'
-import App from './App'
+import app from './components/app'
 
+console.log('app')
 /* eslint-disable no-new */
 new Vue({
   el: 'body',
-  components: { App }
+  components: { app }
 })
