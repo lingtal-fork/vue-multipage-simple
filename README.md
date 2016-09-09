@@ -30,7 +30,7 @@ npm test
 #### webpack.base.conf.js
 有多少新增页面就应该在entry增加多少个入口的chunk
 比如现在新增的admin的chunk
-```
+```js
 entry: {
   app: './src/main.js',
   admin: './src/admin.js'
@@ -39,7 +39,7 @@ entry: {
 
 #### webpack.dev.conf.js
 通过``html-webpack-plugin``这个plugin导出新增的页面
-```
+```js
 new HtmlWebpackPlugin({
   filename: 'admin.html',
   template: 'admin.html',
@@ -73,12 +73,12 @@ new HtmlWebpackPlugin({
 > excludeChunks : 允许你跳过一些chunks（例如，不要单元测试的 chunk）.
 >
 > xhtml : 用于生成的HTML文件的标题。
-> 
+>
 > title : true | false。如果是true，把link标签渲染为自闭合标签，XHTML要这么干的。默认false。
 
 #### webpack.prod.conf.js
 同样通过``html.webpack.plugin``来新增页面
-```
+```js
 new HtmlWebpackPlugin({
   filename: process.env.NODE_ENV === 'testing'
     ? 'admin.html'
